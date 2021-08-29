@@ -275,11 +275,126 @@ udo apt-get install php7.4-mbstring
 
 ## Cómo iniciar un proyecto
 
-Al igual que la mayoría de gestores de paquetes, Composer también tiene un comando especial para empezar un proyecto con y que este pueda descargar las dependencias que necesitamos de una vez.
+>Al igual que la mayoría de gestores de paquetes, Composer también tiene un comando especial para empezar un proyecto con y que este pueda descargar las dependencias que necesitamos de una vez.
 
 ``` composer init ```
 Para instalar las dependencias recuerda utilizar el comando:
 
 ``` composer install ```
+
+Para iniciar un proyecto podemos ejecutar el comando composer init y se debe llenar la configuración basica 
+
+**Ejemplo**
+![composer_001](./info/composer_001.png)
+
+
+## Introducción a JSON (JavaScript Object Notation) 
+
+> JSON es un es un estándar para el intercambio de información que usa la sintaxis de objetos de JS. Todo va entre comillas, y las claves: valor se separan por comillas. Siempre hay que utilizar comillas dobles. Además el último elemento no puede tener una coma.
+
+
+>PD: Un archivo JSON no debe tener comentarios.
+![Json](./info/Json.jpg)
+
+```Javascript 
+{
+    "name": "rimorsoft",
+    "description": "Programación Web",
+    "courses": {
+        "advanced": ["PHP","VUEjs"],
+        "basic": ["JSON","HTML"]
+    }
+} 
+``` 
+
+## Autoload
+
+Básicamente autoload.php es el archivo que contiene ya todas las clases y archivos precargados de tal forma que podemos acceder a cualquiera de sus clases/funciones usando sus nombres de espacios, etc.
+
+No lo confundas, el autoload que está dentro de del composer.json es únicamente una configuración que le pones a tu archivo de composer para indicarle cuáles son las clases que tiene que cargar, el archivo composer.json por si solo no hace nada, es solo un archivo de configuración, lo que realmente hace la magia es el archivo autoload.php, este archivo se genera gracias al composer.json y a la configuración que le pusiste dentro, es por eso que siempre tienes que correr composer install.
+
+Es el archivo autoload.php el que tiene ya todas las clases y otros archivos pre-cargados. Es por so que en el index.php tienes que requerirlo, de esa forma al requerir el autoload.php desde el index.php haces que este también tenga ya todos los archivos pre-cargados.
+
+**Configuraciones ** 
+
+Files → Permite cargar una serie de archivos con helpers. Aquí conficuramos archivos ayudantes (helpers).
+Classmap → Nos deja cargar carpetas de una manera directa carpetas que van a tener dentro de si diferentes clases.
+Psr-0 → Ya que es más antiguo, tenemos que poner todas las rutas de las carpetas.
+Psr-4 → Al hacer énfasis a la carpeta principal, este entiende todas las rutas dentro de sí. (remonedado)
+
+-> Comando composer dump 
+
+
+```Javascript
+{
+    "autoload": {
+        "files": [
+            "src/file1.php",
+            "src/file2.php"
+        ],
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-0": {
+            "Text\\": "src/"
+        },
+        "psr-4": {
+            "Text\\": "src/"
+        }
+    }
+}
+```
+
+- Invocamos  en los index.php 
+`require __DIR__ . '/vendor/autoload.php';`
+
+**Enlaces** 
+- https://latteandcode.medium.com/estandares-psr-para-escribir-codigo-php-acc68d97f6d3
+
+## Comandos de Composer 
+
+> El primer paso de todo proyecto es crear el archivo composer.json, esto es lo correcto. Si escribimos la palabra composer en la bash nos mostrará una lista de comando que podemos utilizar.
+
+- Install → Si tienes el paquete agegado a tu composer.json
+- Require → Si no tienes configurado en JSON, utilizar este para añadir las dependencias que requerimos.
+- Remove → Si ya no requieres de algún componente, con este comando los removemos del proyecto (las desinstala todo).
+- Self-update → Nos ayuda a actualizar a composer.
+- Update → Este comando se conenccta a internet para saber si existe alguna actualización.
+- Dump → Para agregar composer a nuestro proyecto.
+
+
+
+`> composer ` -> Muestra la lista de los comandos 
+
+```
+//Lo utilizamos cuando tenemos la configuracion respecto a composer. 
+composer install
+
+//si no lo tienes configurado en tu json
+composer require phpunit/phpunit
+
+//Si deseas removerlo
+composer remove phpunit/phpunit
+
+//De manera automática se crea la configuración 
+composer dump
+```
+
+## composer.lock
+
+- El archivo composer.lock no lo vamos a tocar ni editar, este nos sirve para trabajar con otras personas en nuestros proyectos, ya que este archivo muestra la descripción exacta y el detalle de los componentes y paquetes.
+
+- Este archivo lo crea y edita composer.
+
+- Este archivo es necesario por que entre programadores no se comparte el archivo vendor, pero gracias a este archivo nuestros compañeros podrán saber cuáles dependencias deben descargar.
+
+- look proviene del ingles y significa mira..  lo cual nos da entender que en el podemos mirar todas las dependencias
+
+- composer.lock -> Es la descripción exacta y el detalle de los componentes y paquetes.
+- composer.json -> Es la descripción exacta de los paquetes.
+
+- Así es, son archivos necesarios cuando estamos trabajando en equipo o colaborando a algún proyecto. Son archivos que deben ir versionados y jamás ignorados.
+
 
 I'm  Developer  PHP
