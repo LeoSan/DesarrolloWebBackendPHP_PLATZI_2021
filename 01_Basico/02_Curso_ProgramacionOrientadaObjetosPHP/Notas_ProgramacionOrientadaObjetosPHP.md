@@ -209,4 +209,76 @@ https://www.youtube.com/watch?v=Id3kTuEPB_s&ab_channel=codigofacilito
 
 ![POO](./info/POO.png)
 
-Bikatti
+## Para pruebas 
+
+- Paso 1: creamos un xml llamado phpunit.xml 
+```
+<?xml version="1.0" encoding = "UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+<testsuite name="test directory">  
+  <directory>tests</directory>
+</testsuite>
+</phpunit>
+```
+
+- Paso 2:Creamos nuestra carpetas de test de pruebas  /test/PostTest.php 
+
+```
+<?php
+
+use PHPUnit\Framework\TestCase;
+use App\Post;
+use App\Comment;
+
+class PostTest extends TestCase
+{
+    public function test_add_comment_to_post()
+    {
+        $post = new Post();
+        $comment = new Comment();
+
+        $post->addComment($comment);
+
+        $this->assertEquals(1, $post->countComments());
+        $this->assertInstaceOf(Comment::class, $post->getComments()[0]);
+    }
+}
+```
+
+
+> Nota: Para los que están trabajando con el cmd directamente de VSCode ejecuten esto y les funcionará:
+
+Si no te muestra el test
+
+$ vendor/phpunit/phpunit/phpunit
+Tendrás que ejecutarlo directo al folder/file, esto sucede con la última versión de composer y phpunit:
+
+$ vendor/phpunit/phpunit/phpunit --colors=always tests
+
+ó
+
+$ vendor/phpunit/phpunit/phpunit --colors=always tests/PostTest.php
+
+
+ - Los test nos permiten garantizar la fiabilidad, calidad y mantenimiento del software. 
+
+`php vendor\phpunit\phpunit\phpunit .\tests\PostTest`
+
+```
+<?php
+
+namespace App;
+
+class Comment {
+
+    public $like_count = 0;
+
+    public function like(User $usuario) : int {
+        return $this->like_count;
+    }
+    
+}
+
+
+?>
+```
