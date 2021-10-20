@@ -36,7 +36,7 @@
 - [En Laravel El tema de Relaciones Polimórficas ](https://laravel.com/docs/7.x/eloquent-relationships#polymorphic-relationships)
 - [El tema de attach ](https://www.amitmerchant.com/attach-detach-sync-laravel/)
 
- ´´´Php
+´´´Php
 	//Algo Nuevo: Esto equivale 
 	$table->morphs('rateable');
 	
@@ -49,7 +49,7 @@
 
 > Nota: cuando Usamos tablas pivote podemos extenderlo tipo Pivot pero al final es un modelo 
 
-´´´
+´´´Php
 class Rating extends Model-> Pivot {
 
 
@@ -101,7 +101,7 @@ pivote, Indicamos el campo con un valor inermedio para cumplir con las reglas de
 > Aquí es donde el titulo avanzado del curso toma sentido jeje, en un sistema diferente a este (llamemosle un sistema normal) 
 lo que se haría sería establecer la otra parte de la relación polimorfa en los modelos específicos, 
 por ejemplo en el caso del modelo User describiríamos la relación de la siguiente forma:
-´´´
+´´´Php
 public function ratings()
 {
 	return $this->morphMany( 'App\Models\Rating', 'qualifier' );
@@ -137,7 +137,7 @@ en la tabla pivote el id que tenga el modelo relacionado al score ya antes menci
 ## EJEMPLO2:
 - Ahora supongamos que YouTube, además de videos, tenga imagenes. Entonces nace una nueva relación muchos a muchos entre USER e IMAGES. Crearías una tabla pivote que tenga el user_id y el image_id.
 - Listo. Entonces quedaría así:
-´´´
+´´´Php
 ejemplo1: user_id y video_id
 ejemplo2: user_id y image_id
 ´´´ 
