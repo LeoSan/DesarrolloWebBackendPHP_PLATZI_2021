@@ -369,4 +369,167 @@ Ya contamos con Librerias que podemos especificar que tipo exception podemos man
 - Siempre trata de enviar la excepción que más claramente indique lo que sucedió, esto no hará tu control de errores más sencillo, pero sí te ayudará a entender las causas de los errores que aparecen en tu código.
 
 
+## Debug
+
+## Reflexiones al momento de validar errores 
+- Aunque tengas tu try-catch, ten cuidado que tu catch no emita un nuevo error.
+- El middleware Whoops es el que utilizaremos, nos da una interfaz muy amigable para revisar cómo se ven las excepciones. Es compatible con muchos frameworks y utiliza PSR7.
+- Whoops ya viene preparado para que lo integremos en lo que estamos trabajando.
+- Sin Whoops podemos ver el nombre del archivo y la línea donde estaba el error, pero usándolo podemos ver cada parte, el código y los datos del entorno.
+
+## Codigo 
+- Podemos instalar Whoops para visualizar las Excepciones de manera mas amigable ´composer require filp/whoops´ 
+- Podemos instalar el middleware de  Whoops  ´composer require franzl/whoops-middleware´ 
+
+
+## Xdebug
+
+> Existe una herramienta incluida en Homestead llamada Xdebug la cual nos permite tener un control mejor a la hora de hacer debug. 
+- Nos deja ver el valor de las variables en tiempo real, detener la aplicación en ciertos puntos y avanzar en ella paso a paso.
+
+- La función phpinfo() despliega toda la información de nuestro servidor para que la podamos ver. 
+- Es muy importante no dejarla pública ni en tu servidor de producción.
+- Las configuraciones que más nos interesan son acerca del remote para poder hacer debug conectándonos por fuera de la máquina virtual (ya que estamos usando Homestead).
+- Debemos instalar un complemento en Chrome para agregar sesiones de debug llamado Xdebug helper
+- Para comenzar la comunicación con Xdebug tenemos que activar el complemento de Chrome y el botón de escucha de PHPStorm. 
+- Después agregamos breakpoints para detener la ejecución del código en los lugares donde queremos analizar su comportamiento.
+- PHPSESSID es una cookie que sirve para identificar las sesiones de los usuarios, se almacena en el navegador y así sabremos que es el mismo usuario el que sigue trabajando con nuestra aplicación.
+- Las configuraciones que más nos interesan son acerca del remote para poder hacer debug conectándonos por fuera de la máquina virtual (ya que estamos usando Homestead).
+
+```
+Para los que les salio el error con el xdebug visual code de Twig_Extension_Debug class is deprecated.
+
+solucion en su basecontroller.php donde instaciamos esta dependencia cambiamos a esto
+
+//quitamos
+$this->addExtension = new \Twig_Extension_Debug();
+//remplazamos 
+$this->addExtension = new \Twig\Extension\DebugExtension;
+```
+
+```
+De este link se pueden descargar lo necesario si estan trabajando de otra forma XDebug y el codigo que deben de agregar al PHP.INI es:
+
+[XDebug]
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+zend_extension=/ruta/a/libreriaDLLXDEBUG
+```
+## Enlace 
+- Extensión Chrome -> https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc 
+- Debuggins on Laravel Homestead using VSCode -> https://christattum.com/debugging-on-laravel-homestead-using-vscode/
+- Configurar XDebug con VSCode y Homestead    -> https://abalozz.es/configurar-xdebug-con-visual-studio-code-y-homestead/ 
+- Youtube  -> https://www.youtube.com/watch?v=xME6uHYTcLU&t=288s&ab_channel=PANGY-TV
+- Youtube  -> https://www.youtube.com/watch?v=GdYlNUQPQqw&ab_channel=S%C3%B8renSpangsbergJ%C3%B8rgensen
+
+
+## Logs
+> Los logs normalmente son archivos en los que almacenamos errores o eventos que ocurren en nuestra aplicación. Hay muchas razones para tenerlos, como el poder monitorear para encontrar bugs; también podemos querer monitorear eventos como el uso de una app o un usuario que esté realizando una acción. Son archivos muy grandes con mucha información.
+
+- El comando tail te permite ver el final de un archivo.
+- Es importante tener los logs como soporte o respaldo para solucionar problemas.
+- La librería Monolog nos ayuda a implementar logs. Puede enviar los logs hacia archivos, sockets, bases de datos, entre otras.
+- El nombre del canal es importante para poder dividir el contenido que vamos a ir guardando.
+- Existe una categorización de severidad de los errores: DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY.
+- Si tienes otros procesos puedes crear en el log diferentes nombres para poder identificar fácilmente en qué parte del código pasó un error.
+- Cuando creamos la carpeta de logs, es buena práctica agregarla al gitignore porque no tienen valor para el repositorio.
+- Recuerda que nuestro endpoint está sobre public y no sobre la raíz del proyecto.
+- La librería Monolog nos ayuda a implementar logs. Puede enviar los logs hacia archivos, sockets, bases de datos, entre otras
+- Podemos usar monolog para manejar nuestros log `composer require monolog/monolog` 
+- https://packagist.org/packages/monolog/monolog
+- $e->getMessage() se usa para obtener el mensaje exacto que tiene una excepción. Esto es útil para separar el tipo de errores
+- Ahora dotenv pone las variables de entorno dentro de $_ENV ya no se puede usar getenv porque da error
+
+```Nota:
+Existe una categorización de severidad de los errores: DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY
+```
+```Nota:
+Cuando creamos la carpeta de logs, es buena práctica agregarla al gitignore porque no tienen valor para el repositorio
+```
+
+```
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
+// create a log channel
+$log = new Logger('name');
+$log->pushHandler(new StreamHandler(__DIR__ . '/../logs/app.log', Logger::WARNING));
+
+// add records to the log
+$log->warning('Foo');
+$log->error('Bar');
+
+
+Podemos crear un archivo .gitignore para excluir nuestros log
+
+*
+!.gitignore
+```
+
+## Async tasks
+
+- Existen procesos que queremos ejecutar pero no queremos que el usuario se quede esperando por una respuesta. En muchos casos esos tiempos de espera serán muy grandes dependiendo del tamaño de los archivos.
+- La mejor solución es darle una respuesta inmediata al usuario como “Recibimos tu archivo, te enviaremos un correo cuando lo procesemos” y en otro proceso estaremos trabajando con el archivo y al finalizar enviaremos el correo. A esto lo llamamos tareas asíncronas.
+- Workerman  es un manejador de trabajos 
+
+
+## Procesar tareas asíncronas
+
+> Es necesario lograr que el envío de correos se haga de manera automática pues no sería sostenible llamar comandos de manera manual. Para esto existe el Cron Job disponible en Linux y Unix que nos permite ejecutar una tarea cada cierto tiempo.
+https://crontab.guru nos ayudará a traducir lo que necesitamos poner en el Cron.
+
+> Dentro de Linux todos los procesos que están corriendo son conocidos como servicios y cuando queremos recargarlos es necesario reconfigurar y reiniciar.
+Esto realmente más que tareas asíncronas son tareas en segundo plano que realiza el sistema operativo, ya que PHP por si solo no maneja asincronismo, pero esta es una buena opción para “simularlo”.
+
+> Y más que hacer PHP, los cron jobs te sirven para ejecutar cualquier comando u archivo de tu sistema operativo, puedes programar tu computadora para que haga cierta cosa cada X tiempo en el lenguaje que más te guste, así sea solo lenguaje bash, recomiendo el curso de Introducción a la línea de comandos para saber un poco más de esto:D!
+
+- En el 2020 los cron jobs son super diferente a como lo hiciste ahí…
+![Ejemplo](./info/ComandoCrontab.png)
+
+- Reiniciar sistema cron en linux 
+$-> `sudo systemctl restart cron`
+
+## Reflexiones de comandos 
+
+> ¿Ves cuán fácil fue? con todo lo que aprendiste hasta este momento crear comandos será una tarea simple pero a la vez muy util para tus aplicaciones, digamos que los comandos son acciones que solo podrán ser ejecutadas por alguien que tenga acceso de consola a nuestra aplicación, por lo que estas acciones a la vez son muy seguras.
+
+
+## Security
+
+- Es recomendado que trabajes siempre con las versiones más recientes de lo que estés usando, como lenguajes, frameworks o bases de datos. 
+- Si es necesario que mantengas una versión anterior, revisa si hay parches de seguridad disponibles ya que lo más probable es que los desarrolladores sigan implementando estas mejoras.
+- Uno de los mayores problemas en la aplicación web es la falta de validaciones por el lado de los programadores (nosotros), como manipulación de ID’s o en el momento de autenticar, dando pie a dar información sobre los usuarios a los atacantes.
+- Existe un proyecto llamado OWASP que ayuda a identificar, catalogar y nos brinda herramientas que podemos utilizar para mejorar las aplicaciones. 
+- Esto aplica para otros lenguajes de backend. En su top 10 tendremos las vulnerabilidades que más han surgido en el año.
+- Si vas a mantener datos de usuarios, al momento de ir a producción es importante usar conexiones seguras HTTPS ya que esto bloquea el acceso de los atacantes al momento de los clientes conectarse al servidor web.
+
+## Lecturas recomendadas
+ - OWASP -> https://owasp.org/
+ - https://www.owasp.org/index.php/Main_Page
+ 
+ ## TECNICAS DE SEGURIDAD
+ 
+- pdo (P Data Object) viene de PHP Data Object y son las librerías base con las que se comunica PHP y un motor de base de datos. 
+- Eloquent encapsula esta información y nos genera una capa superior que nos permite comunicarnos con la base de datos usando buenas prácticas.
+- Confiar en lo que el usuario escribe es un error al desarrollar porque puede haber atacantes que buscan obtener información que no les corresponde.
+- En pdo existen las sentencias preparadas que creará el query con placeholders que luego se cambiarán por los valores reales, escapando la información y evitando SQL Injection. 
+- Lo importante es que cuando trabajes con entradas de usuario, valides siempre.
+- Un ataque XSS es un ataque en el que alguien trata de inyectar código en nuestra aplicación. 
+- Chrome cuenta con un auditor que evita estos ataques pero sólo a partir de una versión avanzada.
+- `strip_tags y htmlspecialchars` van a escapar los caracteres HTML evitando ataques XSS
+- Ademas de estas funciones igual hay una muy poderosa que se llama filter_var recomiendo investigarla.
+- SIEMPRE validen lo que sus usuarios les envían:D!
+
+```
+	$sql=$dbh->prepare($consulta);	
+	$sql->bindParam(1, $_POST['anio'], PDO::PARAM_STR,4);
+	$sql->execute();			
+	$total=$sql->fetchColumn();
+	$msg=($total===false) ? "No hay filas" : sprintf("Suma: %d",$total); 
+```
+- Los ataques XSS son un tipo de inyección en la cual un atacante logra ejecutar código en los navegadores de los usuarios que acceden a un sitio web legítimo
+
+
+
 - chrome://settings/cookies
