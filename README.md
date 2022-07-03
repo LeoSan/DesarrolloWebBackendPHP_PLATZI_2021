@@ -14,11 +14,19 @@
 
 > Learning about PHP - Medio 
 
-proximamente 
+- 🎓 Curso Introduccion Laravel - [Ver Certificado](#)
+- 🎓 Curso Básico Manejo Datos Laravel Eloquent ORM - [Ver Certificado](#)
+- 🎓 Curso Introduccion Laravel 8 - [Ver Certificado](#)
 
 > Learning about PHP - Avance
 
-Proximamente 
+- 🎓 Curso API REST - [Ver Certificado](#)
+- 🎓 Curso API REST Laravel - [Ver Certificado](#)
+- 🎓 Curso Laravel 8 Avanzado - [Ver Certificado](#)
+- 🎓 Curso Introducción Despliegue Aplicaciones - [Ver Certificado](#)
+- 🎓 Curso Desarrollo Laravel Test Driven Development - [Ver Certificado](#)
+- 🎓 Curso PHP Laravel - [Ver Certificado](#)
+- 🎓 Curso Avanzado PHP - [Ver Certificado](#)
 
 > Personal Project - 
-Proximamente 
+- Creando un Portafolio Multilenguaje usando Api Rest Laravel [Ver Certificado](#)
