@@ -1,5 +1,7 @@
 # DesarrolloWebBackendPHP_PLATZI_2021
-Parte de mi iniciativa de mejoras de mi aprendizaje y crecimiento profesional llevar a Leonard a la Version LeoSan Profesional 4.0 Todo Sobre PHP suministrado por Platzi 
+
+```Parte de mi iniciativa de mejoras de mi aprendizaje y crecimiento profesional, llevar a Leonard a la Versión LeoSan Profesional 4.0 Todo Sobre PHP suministrado por la plataforma educativa Platzi, ir desaprendiendo para mejorar, sabemos que las tecnologías avanzan todo el tiempo y lo mejor es retomar las bases y reflexionar sobre ellas para crear nuevos cimientos, nuevos pilares y alcanzar un mayor nivel con las grandes novedades del área. ```
+ 
 
 > Learning about PHP - Basic 
 
