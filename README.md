@@ -29,4 +29,5 @@
 - 🎓 Curso Avanzado PHP - [Ver Certificado](#)
 
 > Personal Project - 
-- Creando un Portafolio Multilenguaje usando Api Rest Laravel [Ver Certificado](#)
+- Portal CV - Servidor -  [Back - API REST Laravel](https://github.com/LeoSan/servidor-cv)
+- Portal CV - Cliente  -  [Front - Laravel-react](#)
