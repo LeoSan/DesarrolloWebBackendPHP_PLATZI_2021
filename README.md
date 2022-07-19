@@ -14,19 +14,22 @@
 
 > Learning about PHP - Medio 
 
-- 🎓 Curso Introduccion Laravel - [Ver Certificado](#)
-- 🎓 Curso Básico Manejo Datos Laravel Eloquent ORM - [Ver Certificado](#)
-- 🎓 Curso Introduccion Laravel 8 - [Ver Certificado](#)
+- 🎓 Curso Introduccion Laravel - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/02_Intermedio/01_Curso_Introduccion_Laravel/Examen/Diploma-intro-laravel-2020.pdf)
+- 🎓 Curso Básico Manejo Datos Laravel Eloquent ORM - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/02_Intermedio/02_CursoBasicoManejoDatosLaravelEloquentORM/Examen/2021_Diploma-eloquent-laravel.pdf)
+- 🎓 Curso Introduccion Laravel 8 - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/02_Intermedio/03_Curso_Introduccion_Laravel_8/Examen/2021_Diploma-intro-laravel-platzi.pdf)
 
 > Learning about PHP - Avance
 
-- 🎓 Curso API REST - [Ver Certificado](#)
-- 🎓 Curso API REST Laravel - [Ver Certificado](#)
-- 🎓 Curso Laravel 8 Avanzado - [Ver Certificado](#)
-- 🎓 Curso Introducción Despliegue Aplicaciones - [Ver Certificado](#)
-- 🎓 Curso Desarrollo Laravel Test Driven Development - [Ver Certificado](#)
-- 🎓 Curso PHP Laravel - [Ver Certificado](#)
-- 🎓 Curso Avanzado PHP - [Ver Certificado](#)
+- 🎓 Curso API REST - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/01_CursoAPI_REST/Examen/2021_Diploma-api-rest_PLATZI.pdf)
+- 🎓 Curso API REST Laravel - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/02_CursoAPI_REST_Laravel/Examen/2021_diploma-laravel-api-Platzi.pdf)
+- 🎓 Curso Laravel 8 Avanzado - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/03_Laravel_8_Avanzado/Examen/2021_Diploma-laravel-avanzado_PLATZI.pdf)
+- 🎓 Curso Introducción Despliegue Aplicaciones - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/04_%20Curso_IntroduccionDespliegueAplicaciones/Examen/2021_Diploma-despliegue-apps_PLATZI.pdf)
+- 🎓 Curso Desarrollo Laravel Test Driven Development - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/05_Curso_DesarrolloLaravelTestDrivenDevelopment/Examen/2021_Diploma-laravel-tdd_PLATZI.pdf)
+- 🎓 Curso PHP Laravel - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/08_Curso_PHPLaravel/Examen/2021_Diploma-curso-php-laravel-platzi.pdf)
+- 🎓 Curso Avanzado PHP - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/10_CursoAvanzadoPHP/Examen/2021_Diploma-php-avanzado_PLATZI.pdf)
+
+- 🎓 Certificado de la Carrera Platzi - [Ver Certificado](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/2021_Diploma-Carrera-backend_php_PLATZI.pdf)
+
 
 > Personal Project - 
 - Portal CV - Servidor -  [Back - API REST Laravel](https://github.com/LeoSan/servidor-cv)
