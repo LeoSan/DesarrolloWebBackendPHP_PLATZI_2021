@@ -1,8 +1,6 @@
 # PHP Backend Web Development
 
-```
-Part of my initiative to improve my learning and professional growth, take Leonard to the LeoSan Professional Version 4.0 All About PHP provided by the Platzi educational platform, unlearn to improve, we know that technologies advance all the time and it is best to resume the foundations and reflect on them to create new foundations. 
-```
+```Part of my initiative to improve my learning and professional growth, take Leonard to the LeoSan Professional Version 4.0 All About PHP provided by the Platzi educational platform, unlearn to improve, we know that technologies advance all the time and it is best to resume the foundations and reflect on them to create new foundations.```
 
 > Learning about PHP - Basic 
 
