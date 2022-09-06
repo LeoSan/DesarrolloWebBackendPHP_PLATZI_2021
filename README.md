@@ -36,8 +36,6 @@
 
 
 > Project Certificate -  still in development
-```
-As a personal goal and renewal of all my curricular synthesis, I am raising a manager of skills and experience in multilanguage, to be able to show everything in an easy to administer and configure tool.
-```
+```As a personal goal and renewal of all my curricular synthesis, I am raising a manager of skills and experience in multilanguage, to be able to show everything in an easy to administer and configure tool.```
 - Portal CV - Servidor -  [Back - API REST Laravel](https://github.com/LeoSan/servidor-cv)
 - Portal CV - Cliente  -  [Front - Laravel-react](#)
