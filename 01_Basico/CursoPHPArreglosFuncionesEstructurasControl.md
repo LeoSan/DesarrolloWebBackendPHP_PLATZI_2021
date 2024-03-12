@@ -90,3 +90,22 @@ continue;
 20.
 Si quiero detener un ciclo manualmente sin importar si finalizó adecuadamente, ¿qué palabra reservada debería usar?
 break;
+
+21. ¿Qué es lo primero que debería hacer cuando me enfrento a un problema que debo resolver con código?
+Resolver el problema a mano o planteando un esquema para definir los casos de uso. De esta forma puedo darme una mejor visión de cómo resolver el problema, encontrar patrones y desarrollar un algoritmo para después programarlo.
+
+22. ¿Qué tipo de dato necesita una sentencia if para poder funcionar?
+Necesita un tipo de dato booleano. Esto incluye comparaciones numéricas por medio de operadores relacionales, ya que al final acaban siendo operaciones booleanas.
+
+23. ¿Qué es lo primero que debería hacer si necesito realizar alguna operación con cualquier arreglo?
+Buscar en la documentación. PHP tiene la mayoría de operaciones que puedes hacer con los arreglos implementadas nativamente en forma de funciones.
+
+24. ¿Cómo funciona el operador de nave espacial? `<=>`
+Devuelve -1 si el número de la izquierda es menor que el de la derecha, devuelve 0 si ambos son iguales o devuelve 1 si el número de la izquierda es mayor que el de la derecha.
+
+25. ¿Cuál de las siguientes funciones me permite convertir un string en un array?
+explode()
+
+26. Este ciclo se conoce porque es un ciclo indefinido y se basa en una condicional para saber si se debe ejecutar el código que tiene dentro o no.
+while
+
