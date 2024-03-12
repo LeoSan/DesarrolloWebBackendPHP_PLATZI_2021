@@ -1,0 +1,64 @@
+# Curso Práctico de PHP
+
+Resumen
+1.
+Una herramienta efectiva para entrenar tu pensamiento lógico es
+Escribir pasos a pasos
+REPASAR CLASE
+
+2.
+Al resolver un problema, debemos identificar estas tres variables
+Entrada, salida y proceso
+
+3.
+El resultado del operador xor es
+true si uno de los dos valores son true, pero no ambos.
+
+4.
+El operador ** es de tipo
+Aritmético
+
+5.
+La sentencia SWITCH está compuesta por
+Switch, case, break, default
+
+6.
+El ciclo for te permite recorrer una estructura de datos uno a uno
+Verdadero
+
+7.
+La estructura if siempre va acompañada de una condición en "else"
+Falso, sólo cuando se necesita
+
+8.
+Cuando nuestro script genera un error lo primero que debemos hacer es
+Leer el mensaje de error a detalle
+
+9.
+Desde un script de PHP se puede imprimir código HTML en pantalla
+Verdadero
+
+10.
+Qué sucede si al finalizar una instrucción independiente no escribes un ;
+Genera error en la línea siguiente
+
+***11.
+Para empezar a escribir un script en PHP es necesario
+Configurar el servidor local
+REPASAR CLASE
+
+12.
+Escribir nuestro código en funciones
+Permite optimizar y modularizar el código
+
+13.
+Los diagramas de flujo solo se pueden hacer con un proceso a la vez
+Falso, un diagrama puede tener varios procesos
+
+14.
+La etiqueta de cierre para un script de PHP es necesaria para evitar errores
+falso
+
+15.
+El operador aritmético para realizar una multiplicación es
+*
