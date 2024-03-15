@@ -1,0 +1,129 @@
+# Curso de PHP: Integración con HTML
+Resumen
+
+1.
+¿Cómo funciona el Server Side Rendering?
+Mi servidor procesa toda la página únicamente en la primera solicitud y manda las plantillas HTML al navegador ya procesadas.
+REPASAR CLASE
+
+2.
+¿Cómo funciona el Client Side Rendering?
+Mi servidor manda una página en blanco y archivos de JavaScript al cliente para que sea el cliente quien se encargue de renderizar la página.
+
+3.
+¿Cómo funciona el Static Site Generation?
+La computadora del desarrollador se encarga de prerenderizar toda la página y únicamente sube las plantillas al servidor para que este únicamente se encargue de mandar dichas plantillas al cliente.
+
+4.
+¿Es posible ejecutar archivos PHP con HTML sin necesidad de un servidor local?
+Falso, al tener código HTML necesitamos de un servidor que sea capaz de preprocesar el código PHP y HTML.
+
+5.
+¿Es importante usar etiquetas de cierre de PHP cuando empezamos a trabajar con HTML?
+Verdadero, ya que de esta forma PHP identifica cuándo trabajamos con PHP y cuándo trabajamos con HTML.
+
+6.
+¿Con qué extensión debemos guardar nuestros archivos de PHP cuando empezamos a incluír HTML dentro?
+.php
+
+7.
+¿Cuál de las siguientes sintaxis es la más recomendada para imprimir texto con PHP dentro de HTML?
+{{ "Hola, Mundo." }}
+REPASAR CLASE
+
+8.
+¿Cuál de las siguientes sintaxis es la más recomendada para usar condicionales con PHP dentro de HTML?
+<?phpif( condicion ): ?>
+<!-- Código HTML -->
+<?phpendif; ?>
+
+9.
+¿Cuál de las siguientes sintaxis es la más recomendada para usar ciclos con PHP dentro de HTML?
+<?php for( condicion ): ?>
+<!-- Código HTML -->
+<?php endfor; ?>
+
+10.
+¿Es posible pasar variables de PHP hacia JavaScript?
+Verdadero, PHP, al ser un preprocesador, es capaz de hardcodear código JavaScript en el HTML final que se manda al navegador. Sin embargo, solo está imprimiendo los valores, como código JavaScript directamente.
+
+11.
+¿Es posible pasar variables de JavaScript a PHP?
+Verdadero, esto es conocido como una solicitud asíncrona al servidor. Hay que plantearse bien por qué se desea hacer esto, ya que PHP se ejecuta mucho antes de que JavaScript entre en acción.
+
+12.
+¿Cuál de las siguientes es una buena práctica para evitar código espagueti?
+Poner lógica de PHP dentro del documento HTML que estamos trabajando.
+REPASAR CLASE
+
+13.
+¿Cuáles son las 3 variables superglobales que nos da PHP para obtener una solicitud?
+`$_GET`, `$_POST` y `$_REQUEST`
+
+14.
+¿Cuál de las siguientes es una característica del método `$_GET`?
+Cualquier parámetro que se mande al servidor será enviado a través de la URL.
+
+15.
+¿Cuál de las siguientes es una característica del método `$_POST`?
+Cualquier parámetro que se mande al servidor será enviado "por detrás" de forma que no sea visible a simple vista para los usuarios.
+
+16.
+¿Los formularios nativos de HTML son capaces de enviar solicitudes al servidor?
+Verdadero, a través del atributo `action` y un botón de tipo `submit` podemos mandar una solicitud al servidor con los datos del formulario.
+
+17.
+¿Qué tipo de encriptación debemos usar en nuestro formulario si queremos subir imágenes a nuestro servidor?
+multipart/form-data
+
+18.
+Cuando subimos una imagen al servidor ¿estás se guardan automáticamente?
+Flaso. Estas imágenes se guardan en una carpeta temporal que es limpiada cada cierto tiempo. Depende de nosotros guardarlas en alguna carpeta para evitar que se borre.
+
+19.
+¿Desde cuál variable superglobal podemos tener acceso a la ruta temporal de mi archivo subido?
+`$_FILES`
+
+20.
+¿Podemos enviar arreglos desde un formulario HTML al servidor?
+Verdadero. Basta con agregar corchetes `[]` en el atributo `name` para que en el servidor se interprete como un arreglo.
+
+21.
+¿Cuáles funciones me permiten validar si un campo ha sido enviado y si dicho campo está vacío?
+`isset()` y `empty()`
+
+22.
+¿Por qué es importante sanitizar los datos que recibo de mis usuarios?
+Porque puedo tener usuarios malintencionados que quieran inyectar código en mi página web.
+
+23.
+¿Cuál de las siguientes funciones podemos utilizar para validar datos que recibo de mis usuarios?
+`filter_var()`
+
+24.
+¿Podemos usar la función `mail()` de PHP?
+Verdadero, pero requiere de una configuración muy avanzada en nuestra computadora para poder usarla, por eso es mejor usar alternativas como PHP Mailer.
+
+25.
+¿Qué es Composer?
+Es un manejador de paquetes similar a NPM de JavaScript que nos sirve para utilizar librerías de terceros en PHP.
+
+26.
+¿Qué tipo de rendering utiliza PHP?
+Server Side Rendering (SSR)
+
+27.
+Si necesito realizar cálculos con PHP para después imprimir en HTML... ¿Qué debería hacer?
+Separar la lógica de la vista, hacer todos los cálculos al inicio de nuestro documento para después únicamente imprimir los resultados en nuestro HTML.
+
+28.
+¿Es posible ver los datos enviados por medio de una solicitud POST?
+Verdadero. Usando la consola de desarrolladores podemos inspeccionar cada solicitud que es enviada al servidor y ver qué datos se están mandando.
+
+29.
+¿Cuál es el archivo que mi servidor buscará por defecto para cargar incluso si no se especifica en la URL?
+index.php o index.html
+
+30.
+¿Podemos mandar una solicitud hacia la misma página desde la que se manda?
+Verdadero. Simplemente en el action de mi formulario apuntó hacia la misma página y con PHP puedo validar y obtener dicha solicitud.
