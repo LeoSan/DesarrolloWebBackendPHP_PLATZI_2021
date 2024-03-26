@@ -1,0 +1,122 @@
+Resumen
+1.
+Entro a trabajar a una empresa que tiene un sistema desarrollado con PHP 5. ¿Qué debería hacer para decidir si vale la pena actualizar?
+Evaluar cuál sería el costo de actualizar el sistema, si vale la pena hacerlo para las necesidades de la empresa en cuestión y qué tanto tiempo tomaría hacer esa actualización.
+
+2.
+¿Qué versión de PHP debería elegir si quiero experimentar con las cosas más nuevas del lenguaje o incluso con implementaciones futuras?
+La versión más reciente que se haya lanzado, o incluso versiones beta, ya que estas nos permiten dar un vistazo al futuro del lenguaje.
+
+3.
+Quiero empezar a desarrollar mi propio proyecto en PHP que en un futuro pondré en producción. ¿Qué versión de PHP debería usar?
+La última versión oficial o LTS, ya que esa versión nos asegura que tendrá soporte a futuro o que ya es una versión que tiene menor probabilidad de bugs.
+
+4.
+Si necesito saber cómo funciona una función que PHP ya tiene predefinida, ¿en dónde debería buscar información?
+En la documentación oficial de PHP.
+
+5.
+¿Para qué nos sirve PHPDoc?
+Para documentar nuestras clases o funciones. Ayudan al editor de código a dar sugerencias con mayor información o incluso podemos usar generadores de documentación que lean PHPDoc.
+
+6.
+Si tengo varios proyectos que usan diferentes versiones de PHP, ¿qué debería hacer para que mi versión de PHP instalada no rompa mis proyectos que usan otras versiones?
+Usar entornos virtuales.
+
+7.
+¿Para qué nos sirve un Virtual Host?
+Nos ayuda a generar una URL ficticia que solo funciona en nuestra computadora para enlazar con algún proyecto que tenga en mi servidor local.
+
+8.
+Si yo declaré una constante dentro de un bloque if, ¿de qué forma declaré esa constante?
+Usando la palabra reservada const.
+REPASAR CLASE
+
+9.
+Si yo declaré una constante dentro una clase, ¿de qué forma declaré esa constante?
+Usando la palabra reservada const.
+
+10.
+¿Qué es una constante mágica?
+Una constante que puede cambiar su valor dependiendo del entorno en la que es invocada. Realmente para PHP no son constantes.
+
+11.
+¿Qué pasaría si, en lugar de ponerle un nombre a una variable después del signo de dólar, escribo otra variable?
+Obtendríamos un error, ya que PHP necesita sí o sí de un nombre después del signo de dólar.
+REPASAR CLASE
+
+12.
+¿Cuál sería el resultado del siguiente código?
+<?php
+$variable = "edad";
+$$variable = 14;
+echo $edad;
+14
+
+13.
+Si necesito usar una variable externa dentro de una función de PHP, ¿qué opciones tengo?
+Debo agregar la palabra reservada use junto con la variable en mi función.
+REPASAR CLASE
+
+14.
+¿Qué función de PHP deberíamos usar para hacer redirecciones a otras páginas?
+header()
+
+15.
+Si necesito definir el valor de una variable con base en un caso u otro, ¿qué estructura de control debería utilizar?
+match
+
+16.
+¿Cuál sería el resultado del siguiente código?
+
+<?php
+
+function bark() {
+return "woof!";
+}
+
+$function = "bark";
+echo $function();
+woof!
+
+17.
+¿Qué significa pasar un parámetro por referencia?
+Significa que, en lugar de hacer una copia de una variable, estoy pasando la referencia en memoria de la variable orignal. Esto me permite tener control sobre la variable original.
+
+18.
+¿Cuál sería la forma correcta de pasar parámetros por defecto a una función?
+function suma($n1 = 5, $n2)...
+REPASAR CLASE
+
+19.
+¿Cuál es la forma correcta de llamar a esta función usando named arguments?
+function suma($n1, $n2) { return $n1 + $n2; }
+suma( n1: 4, n2: 6, );
+
+
+20.
+Las funciones anónimas son similares a los callbacks de JavaScript, sin embargo, en PHP también se llaman...
+Closures
+
+21.
+Si necesito usar una variable externa dentro de una función anónima de PHP, ¿qué opciones tengo?
+Debo agregar la palabra reservada use junto con la variable en mi función.
+
+22.
+¿Cómo simplificarías el siguiente código usando arrow functions?
+$multiplied = array_map(function($current) { return $current * 2; }, [2, 3, 4]);
+$multiplied = array_map( fn($current) => $current * 2, [2, 3, 4] );
+
+23.
+¿Es posible especificar qué tipo de dato queremos recibir en nuestras funciones?
+Verdadero, PHP permite declaraciones de tipo escalar las cuales nos permiten definir el tipo de dato que esperamos recibir en una función.
+
+24.
+¿Cómo definirías que en el primer parámetro de la siguiente función quieres recibir un tipo de dato entero?
+function suma($n1, $n2) { return $n1 + $n2; }
+function suma(int $n1, $n2) { return $n1 + $n2; }
+
+25.
+¿Cómo expresarías que la siguiente función va a devolver sí o sí un entero?
+function suma($n1, $n2) { return $n1 + $n2; }
+function suma($n1, $n2) : int { return $n1 + $n2; }
