@@ -29,8 +29,7 @@ Nos ayuda a generar una URL ficticia que solo funciona en nuestra computadora pa
 
 8.
 Si yo declaré una constante dentro de un bloque if, ¿de qué forma declaré esa constante?
-Usando la palabra reservada const.
-REPASAR CLASE
+Usando la función define().
 
 9.
 Si yo declaré una constante dentro una clase, ¿de qué forma declaré esa constante?
@@ -42,8 +41,7 @@ Una constante que puede cambiar su valor dependiendo del entorno en la que es in
 
 11.
 ¿Qué pasaría si, en lugar de ponerle un nombre a una variable después del signo de dólar, escribo otra variable?
-Obtendríamos un error, ya que PHP necesita sí o sí de un nombre después del signo de dólar.
-REPASAR CLASE
+PHP primero evaluaría el valor de esa otra variable para determinar el nombre de la variable que originalmente estaba escribiendo. Se llaman variables variables.
 
 12.
 ¿Cuál sería el resultado del siguiente código?
@@ -55,8 +53,7 @@ echo $edad;
 
 13.
 Si necesito usar una variable externa dentro de una función de PHP, ¿qué opciones tengo?
-Debo agregar la palabra reservada use junto con la variable en mi función.
-REPASAR CLASE
+Puedo pasarla como parámetro, usar la palabra reservada global o usar el arreglo $GLOBALS.
 
 14.
 ¿Qué función de PHP deberíamos usar para hacer redirecciones a otras páginas?
@@ -85,8 +82,7 @@ Significa que, en lugar de hacer una copia de una variable, estoy pasando la ref
 
 18.
 ¿Cuál sería la forma correcta de pasar parámetros por defecto a una función?
-function suma($n1 = 5, $n2)...
-REPASAR CLASE
+function suma($n1, $n2 = 5)...
 
 19.
 ¿Cuál es la forma correcta de llamar a esta función usando named arguments?
