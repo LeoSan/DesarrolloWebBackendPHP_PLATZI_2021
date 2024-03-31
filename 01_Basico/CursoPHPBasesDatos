@@ -1,1 +1,83 @@
+Resumen
+1.
+¿Es posible guardar datos dentro de PHP?
+Falso. Ningún lenguaje es capaz de guardar datos por sí solo, necesitamos de un RDBMS.
 
+2.
+¿Por qué no podemos simplemente guardar los datos en un archivo de texto simple?
+Porque cuando trabajamos con datos necesitamos poder ordenarlos, filtrarlos, agruparlos, relacionarlos, y demás operaciones.
+
+3.
+¿Cuáles son los tipos de base de datos que existen?
+Relacionales y no relacionales.
+
+4.
+¿A qué RDBMS podemos conectarnos usando el driver de MySQLi de PHP?
+A MySQL y MariaDB.
+
+5.
+¿A qué RDBMS podemos conectarnos usando el driver de PDO de PHP?
+Este driver permite conectarnos a cualquier RDBMS únicamente pasando el usuario y contraseña.
+
+6.
+¿Por qué es buena idea implementar un patrón Singleton cuando hacemos la conexión a nuestra base de datos?
+Porque de esta manera nos aseguramos de que en nuestra aplicación solo exista una única instancia de conexión a nuestra base de datos, ya que solo necesitamos una.
+
+7.
+¿Cuál método de un controlador me permite guardar información en mi base de datos?
+store
+
+8.
+¿Cuál método de un controlador me permite mostrar un formulario para después guardar información en mi base de datos?
+store
+REPASAR CLASE
+
+9.
+¿Cuál método de un controlador me permite eliminar un registro de mi base de datos?
+destroy
+
+10.
+¿Cuál método de un controlador me permite mostrar un formulario para después actualizar información en mi base de datos?
+edit
+
+11.
+¿Cuál método de un controlador me permite actualizar información en mi base de datos?
+update
+
+12.
+¿Para qué sirven los ENUMS en PHP?
+Para enumerar datos de un mismo tipo y usar esas enumeraciones en lugar de usar números planos.
+
+13.
+¿Qué método de PDO debería usar si quiero hacer una consulta plana SQL?
+prepare
+REPASAR CLASE
+
+14.
+Si quiero ligar datos que un usuario escribe a una consulta SQL con el driver de PDO, ¿cuál método sería el más seguro para hacerlo?
+bind_param
+REPASAR CLASE
+
+15.
+¿Es posible usar variables sin valor asignado y después asignarlas al momento de hacer una consulta preparada con PDO?
+Verdadero. La lectura de variables se hace en el momento en el que ejecutamos el método execute, lo que nos permite usar variables y después asignarlas.
+
+16.
+¿Cuál es la diferencia entre bindParms y bindValue?
+Con bindParams puedes reasignar variables antes del execute. Con bindValue no puedes reasignarlas.
+
+17.
+¿Cuál método de PDO debería usar si quiero traerme una lista de registros de mi base de datos?
+fetchAll
+
+18.
+¿Cuál método de PDO debería usar si quiero traerme un único registro de mi base de datos?
+fetch
+
+19.
+¿Es posible revertir una consulta con PHP?
+Verdero. Si usamos transacciones las consultas no se ejecutarán, por lo que podremos revertirlas.
+
+20.
+¿Cuál es la mejor forma de mandar datos de nuestra base de datos a nuestra vista con HTML?
+Hacer las consultas desde nuestros controladores y dejar las variables listas para mandarlas a la vista con HTML.
