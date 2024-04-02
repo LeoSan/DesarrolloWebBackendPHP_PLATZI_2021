@@ -29,8 +29,8 @@ store
 
 8.
 ¿Cuál método de un controlador me permite mostrar un formulario para después guardar información en mi base de datos?
-store
-REPASAR CLASE
+create
+
 
 9.
 ¿Cuál método de un controlador me permite eliminar un registro de mi base de datos?
@@ -50,15 +50,11 @@ Para enumerar datos de un mismo tipo y usar esas enumeraciones en lugar de usar 
 
 13.
 ¿Qué método de PDO debería usar si quiero hacer una consulta plana SQL?
-prepare
-query
-REPASAR CLASE
+exec
 
 14.
 Si quiero ligar datos que un usuario escribe a una consulta SQL con el driver de PDO, ¿cuál método sería el más seguro para hacerlo?
-bind_param
-query
-REPASAR CLASE
+bindParams
 
 15.
 ¿Es posible usar variables sin valor asignado y después asignarlas al momento de hacer una consulta preparada con PDO?
@@ -85,9 +81,15 @@ Verdero. Si usamos transacciones las consultas no se ejecutarán, por lo que pod
 Hacer las consultas desde nuestros controladores y dejar las variables listas para mandarlas a la vista con HTML.
 
 21. ¿Qué es phpMyAdmin?
+Una herramienta visual para administrar bases de datos de una forma más fácil e intuitiva sin escribir código SQL.
 
 22. Si quiero ligar datos que un usuario escribe a una consulta SQL con el driver de MySQLi, ¿cuál método sería el más seguro para hacerlo?
 bindParams
+REPASAR 
+
+23. ¿Qué método de MySQLi debería usar si quiero hacer una consulta plana SQL?
+exec
+REPASAR
 
 
 
