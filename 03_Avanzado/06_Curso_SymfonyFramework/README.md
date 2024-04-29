@@ -10,3 +10,58 @@
 
 
 ## Examen 
+
+Curso de Fundamentos de Symfony 6
+
+Resumen
+1.
+Beneficios de trabajar con Symfony:
+Buenas prácticas, mantenimiento y comunidad profesional.
+2.
+¿Qué es un CLI?
+Es un programa que nos permite hacer instalaciones complejas y largas de manera manual.
+REPASAR CLASE
+3.
+¿Con qué comando instalamos un sitio web en Symfony?
+symfony new project --webapp
+4.
+¿Cómo crecemos en el mundo de la programación?
+Estudiando cursos como este para aprender a leer código construido por personas técnicamente avanzadas.
+5.
+Carpeta src/
+Tiene dentro de sí todas nuestras clases PHP.
+6.
+¿Qué es una página?
+Es el resultado de cualquier método o acción del controlador PageController.
+REPASAR CLASE
+7.
+¿Qué gestor de plantillas usamos en Symfony?
+Twig
+8.
+Poderosa herramienta que brinda información detallada sobre cualquier solicitud:
+Función dd()
+REPASAR CLASE
+9.
+¿Cómo instalamos al sistema de bases de datos?
+Agregando use Doctrine\ORM\EntityManagerInterface; en el controlador adecuado.
+REPASAR CLASE
+10.
+¿Con qué comando creamos una entidad?
+php bin/console make:entity
+11.
+¿Qué es una migración?
+Es la estructura inicial de una tabla.
+12.
+¿Qué método del repositorio usamos para obtener todos los registros de una tabla?
+findAll()
+13.
+¿Cómo instalamos al sistema de formularios?
+composer require symfony/form
+14.
+¿Cómo validamos a un formulario desde el controlador?
+$form->isSubmitted()
+REPASAR CLASE
+15.
+Función para leer archivos CSS generados por encore:
+Con 'bootstrap_5_layout.html.twig' en el archivo de configuración en Twig.
+REPASAR CLASE
