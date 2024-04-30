@@ -48,7 +48,7 @@ REPASAR CLASE
 Agregando use Doctrine\ORM\EntityManagerInterface; en el controlador adecuado.
 php bin/console doctrine:migrations:migrate
 
-POSIBLE -> php bin/console doctrine:database:create 
+POSIBLE -> composer require symfony/orm-pack ---- php bin/console doctrine:database:create  
 REPASAR CLASE
 10.
 ¿Con qué comando creamos una entidad?
