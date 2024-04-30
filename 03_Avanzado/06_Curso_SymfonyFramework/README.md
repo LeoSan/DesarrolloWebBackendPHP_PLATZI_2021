@@ -42,6 +42,7 @@ Twig
 Poderosa herramienta que brinda información detallada sobre cualquier solicitud:
 Función dd()
 Página 404
+POSIBLE  -> composer require symfony/debug-pack
 REPASAR CLASE
 9.
 ¿Cómo instalamos al sistema de bases de datos?
