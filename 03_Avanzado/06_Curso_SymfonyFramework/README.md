@@ -38,6 +38,8 @@ Tiene dentro de sí todas nuestras clases PHP.
 ¿Qué es una página?
 Es el resultado de cualquier método o acción del controlador PageController.
 Es un concepto abstracto de la programación web.
+Es lo que vemos mediante el comando php bin/console about.
+
 REPASAR CLASE
 
 8.
@@ -50,37 +52,39 @@ Función dd()
 Página 404
 POSIBLE  -> composer require symfony/debug-pack
 Debug Symfony Start
+Debug repository
 REPASAR CLASE
 
-10.
+11.
 ¿Cómo instalamos al sistema de bases de datos?
 composer require symfony/orm-pack
 
-11.
+12.
 ¿Con qué comando creamos una entidad?
 php bin/console make:entity
 
-12.
+13.
 ¿Qué es una migración?
 Es la estructura inicial de una tabla.
 
-13.
+14.
 ¿Qué método del repositorio usamos para obtener todos los registros de una tabla?
 findAll()
 
-14.
+15.
 ¿Cómo instalamos al sistema de formularios?
 composer require symfony/form
 
-15.
+16.
 ¿Cómo validamos a un formulario desde el controlador?
 $form->isValid()
 
-16.
+17.
 Función para leer archivos CSS generados por encore:
 encore_entry_link_tags
 
-17. ¿Cómo instalamos al sistema front en Symfony?
+18. ¿Cómo instalamos al sistema front en Symfony?
 composer require symfony/webpack-encore
+REPASAR CLASE 
 
 19. 
