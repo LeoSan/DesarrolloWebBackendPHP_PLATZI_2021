@@ -36,11 +36,7 @@ Tiene dentro de sí todas nuestras clases PHP.
 
 6.
 ¿Qué es una página?
-Es el resultado de cualquier método o acción del controlador PageController.
-Es un concepto abstracto de la programación web.
-Es lo que vemos mediante el comando php bin/console about.
-
-REPASAR CLASE
+Es el resultado de ruta + controlador.
 
 8.
 ¿Qué gestor de plantillas usamos en Symfony?
@@ -48,12 +44,9 @@ Twig
 
 9.
 Poderosa herramienta que brinda información detallada sobre cualquier solicitud:
-Función dd()
-Página 404
+Symfony profiler
 POSIBLE  -> composer require symfony/debug-pack
-Debug Symfony Start
-Debug repository
-REPASAR CLASE
+
 
 11.
 ¿Cómo instalamos al sistema de bases de datos?
@@ -85,6 +78,7 @@ encore_entry_link_tags
 
 18. ¿Cómo instalamos al sistema front en Symfony?
 composer require symfony/webpack-encore
+Con npm o yarn.
 REPASAR CLASE 
 
-19. 
+20. 
