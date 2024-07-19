@@ -101,9 +101,7 @@ composer require symfony/form
 
 3.
 Método para crear un formulario desde el controlador
-createView()
-Posible -> createFormBuolder()
-Repasar
+createFormBuilder()
 
 4.
 Método para conocer si un formulario fue enviado
@@ -111,15 +109,11 @@ isSubmitted()
 
 5.
 Comando para crear un formulario
-composer require symfony/form
-posible-> php bin/console make:form 
-Repasar
+php bin/console make:form
 
 6.
 Función para imprimir una colección de campos en la vista
-getData()
-posible -> {{ form_widget(form) }}
-Repasar
+form_widget()
 
 7.
 Cómo aplicamos un tema de formulario directamente en una vista
@@ -148,14 +142,12 @@ La clase ChoiceType
 13.
 Con qué comando actualizamos a una entidad
 Mediante el comando php bin/console make:controller
-Posible -> php bin/console make:entity
+Esta configuración únicamente es posible al crear la entidad
 Repasar
 
 14.
 Qué clase usamos para crear un select relacionado a una tabla
-ChoiceType
-Posible -> EntityType
-Repasar
+EntityType
 
 15.
 Qué métodos usamos para guardar
@@ -163,9 +155,7 @@ persist() y flush()
 
 16.
 Qué método es obligatorio al momento de actualizar
-update()
-Posible-> createForm()
-Repasar
+flush()
 
 18.
 Cómo desactivamos la validación HTML
