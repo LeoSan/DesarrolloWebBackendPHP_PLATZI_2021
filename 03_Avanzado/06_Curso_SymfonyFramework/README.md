@@ -82,3 +82,97 @@ Con npm o yarn.
 REPASAR CLASE 
 
 20. 
+
+
+## Curso de Symfony 6: Formularios
+
+##Notas
+- 
+
+## Examen 
+
+1.
+Comando de instalación de un proyecto sencillo
+symfony new project
+
+2.
+Comando de instalación del componente form
+composer require symfony/form
+
+3.
+Método para crear un formulario desde el controlador
+createView()
+Repasar
+
+4.
+Método para conocer si un formulario fue enviado
+isSubmitted()
+
+5.
+Comando para crear un formulario
+composer require symfony/form
+Repasar
+
+6.
+Función para imprimir una colección de campos en la vista
+getData()
+Repasar
+
+7.
+Cómo aplicamos un tema de formulario directamente en una vista
+{% form_theme form 'example.html.twig' %}
+
+8.
+Cómo creamos un mensaje flash
+Con el método addFlash()
+
+9.
+Con qué elementos identificamos a nuestras vistas parciales
+Guion bajo ( _ )
+
+10.
+Cómo relacionamos a un formulario con una entidad
+Lo hacemos en el método configureOptions() de la clase del formulario
+
+11.
+Con qué comando instalamos el componente de seguridad CSRF
+composer require symfony/security-csrf
+
+12.
+Qué clase usamos para crear un select
+La clase ChoiceType
+
+13.
+Con qué comando actualizamos a una entidad
+Mediante el comando php bin/console make:controller
+Repasar
+
+14.
+Qué clase usamos para crear un select relacionado a una tabla
+ChoiceType
+Repasar
+
+15.
+Qué métodos usamos para guardar
+persist() y flush()
+
+16.
+Qué método es obligatorio al momento de actualizar
+update()
+Repasar
+
+17.
+Cómo desactivamos la validación HTML
+Con la opción required y el valor false
+
+18.
+Método para validar un formulario desde un controlador
+isValid()
+
+19.
+Con qué comando creamos a un controlador
+php bin/console make:controller
+
+20.
+Qué importamos en una entidad para validar
+use Symfony\Component\Validator\Constraints as Assert;
