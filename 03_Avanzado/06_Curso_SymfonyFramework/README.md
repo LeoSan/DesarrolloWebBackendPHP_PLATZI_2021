@@ -172,3 +172,102 @@ php bin/console make:controller
 21.
 Qué importamos en una entidad para validar
 use Symfony\Component\Validator\Constraints as Assert;
+
+
+
+# Curso de Symfony 6: Creación de API REST
+
+1.
+¿Cómo se llama la especificación para describir y documentar un API?
+Swagger UI
+Repasar
+
+2.
+¿Cómo se llama la herramienta que permite visualizar y probar un API basada en OpenAPI?
+Swagger
+Repasar
+
+3.
+¿Qué instalamos en Symfony para que este tenga las funciones de un API?
+$ composer require api-platform
+Repasar
+
+4.
+¿Con qué comando creamos a la base de datos?
+$ php bin/console doctrine:migrations:migrate
+Repasar
+
+5.
+¿Con qué comando creamos a las tablas en la base de datos?
+$ php bin/console doctrine:migrations:migrate
+
+6.
+¿Cómo se llama el archivo donde creamos la conexión a la base de datos?
+.env
+
+7.
+¿Qué componente debemos instalar para trabajar con los factories?
+$ composer require zenstruck/factory --dev
+Repasar
+
+8.
+¿Qué componente debemos instalar para trabajar con los datos semillas?
+$ composer require orm-fixtures --dev
+
+9.
+¿Cómo se llama el archivo donde configuramos a nuestros datos semillas?
+Seeders.php
+Repasar
+
+10.
+¿Con qué comando creamos a nuestros datos semillas?
+$ php bin/console doctrine:fixtures:load
+
+11.
+¿Cómo se llama nuestra documentación interactiva?
+Swagger UI
+
+12.
+¿Qué clase debemos importar para que nuestra entidad sea un recurso API?
+use ApiPlatform\Metadata\ApiResource;
+
+13.
+¿Qué anotación debemos agregar a nuestra entidad para que sea un recurso API?
+#[ApiResource]
+
+14.
+¿Qué estado HTTP recibimos cuando se crea un registro?
+201
+
+15.
+¿Qué estado HTTP recibimos cuando se elimina un registro?
+204
+
+16.
+¿Qué parámetro debemos configurar para trabajar con la serialización de datos en API Platform?
+normalizationContext
+
+17.
+¿Con qué clase debemos trabajar para configurar la validación de datos?
+use Symfony\Component\Validator\Constraints\Validate;
+Repasar
+
+18.
+¿Con qué anotación impedimos que un campo esté en blanco?
+#[Assert\NotBlank]
+
+19.
+¿Con qué parámetro definimos el número máximo de elementos por página en API Platform?
+paginationItemsPerPage
+
+20.
+¿Qué clase debemos importar para poder configurar el filtrado?
+use ApiPlatform\Metadata\ApiFilter;
+
+21.
+¿Cómo se identifican nuestros recursos de forma única y global?
+Mediante IRI (Internationalized Resource Identifier).
+
+22.
+¿Qué herramienta podemos usar para probar y enviar peticiones a un API?
+Postman
