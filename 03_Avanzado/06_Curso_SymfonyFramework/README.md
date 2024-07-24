@@ -180,23 +180,20 @@ use Symfony\Component\Validator\Constraints as Assert;
 1.
 ¿Cómo se llama la especificación para describir y documentar un API?
 Swagger UI
-Repasar
-
-2.
-¿Cómo se llama la herramienta que permite visualizar y probar un API basada en OpenAPI?
-Swagger
+Es una especificación propia.
 Repasar
 
 3.
+¿Cómo se llama la herramienta que permite visualizar y probar un API basada en OpenAPI?
+Swagger UI
+
+4.
 ¿Qué instalamos en Symfony para que este tenga las funciones de un API?
-$ composer require api-platform
-composer require api-platform/api-pack -> usa este
-Repasar
+composer require api-platform/api-pack
 
 5.
 ¿Con qué comando creamos a la base de datos?
-$ php bin/console doctrine:migrations:migrate
-Repasar
+$ php bin/console doctrine:database:create
 
 6.
 ¿Con qué comando creamos a las tablas en la base de datos?
@@ -209,66 +206,65 @@ $ php bin/console doctrine:migrations:migrate
 8.
 ¿Qué componente debemos instalar para trabajar con los factories?
 $ composer require zenstruck/factory --dev
+$ composer require zenstruck/foundry
 Repasar
 
-9.
+10.
 ¿Qué componente debemos instalar para trabajar con los datos semillas?
 $ composer require orm-fixtures --dev
 
-10.
-¿Cómo se llama el archivo donde configuramos a nuestros datos semillas?
-Seeders.php
-Repasar
-
 11.
+¿Cómo se llama el archivo donde configuramos a nuestros datos semillas?
+AppFixtures.php
+
+12.
 ¿Con qué comando creamos a nuestros datos semillas?
 $ php bin/console doctrine:fixtures:load
 
-12.
+13.
 ¿Cómo se llama nuestra documentación interactiva?
 Swagger UI
 
-13.
+14.
 ¿Qué clase debemos importar para que nuestra entidad sea un recurso API?
 use ApiPlatform\Metadata\ApiResource;
 
-14.
+15.
 ¿Qué anotación debemos agregar a nuestra entidad para que sea un recurso API?
 #[ApiResource]
 
-15.
+16.
 ¿Qué estado HTTP recibimos cuando se crea un registro?
 201
 
-16.
+17.
 ¿Qué estado HTTP recibimos cuando se elimina un registro?
 204
 
-17.
+18.
 ¿Qué parámetro debemos configurar para trabajar con la serialización de datos en API Platform?
 normalizationContext
 
-18.
-¿Con qué clase debemos trabajar para configurar la validación de datos?
-use Symfony\Component\Validator\Constraints\Validate;
-Repasar
-
 19.
+¿Con qué clase debemos trabajar para configurar la validación de datos?
+use Symfony\Component\Validator\Constraints as Assert;
+
+20.
 ¿Con qué anotación impedimos que un campo esté en blanco?
 #[Assert\NotBlank]
 
-20.
+21.
 ¿Con qué parámetro definimos el número máximo de elementos por página en API Platform?
 paginationItemsPerPage
 
-21.
+22.
 ¿Qué clase debemos importar para poder configurar el filtrado?
 use ApiPlatform\Metadata\ApiFilter;
 
-22.
+23.
 ¿Cómo se identifican nuestros recursos de forma única y global?
 Mediante IRI (Internationalized Resource Identifier).
 
-23.
+24.
 ¿Qué herramienta podemos usar para probar y enviar peticiones a un API?
 Postman
