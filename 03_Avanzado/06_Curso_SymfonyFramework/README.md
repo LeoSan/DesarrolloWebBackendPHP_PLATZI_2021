@@ -274,81 +274,110 @@ Postman
 1.
 ¿Cuál es el comando de creación o actualización de entidades?
 php bin/console make:entity y php bin/console edit:entity
-
 Repasar
+
+
 2.
 ¿Cuál es el comando para revisar a nuestras migraciones?
 php bin/console doctrine:migrations:list
+
+
 3.
 ¿Cuál es el tipo de campo para relacionar tablas?
 Existen varios tipos
-
+ManyRelations
 Repasar
+
 4.
 ¿Cuantas estructuras físicas podemos crear al momento de relacionar tablas?
 1
-
+4
 Repasar
+
+
 5.
 ¿Cuál es el comando para cargar datos falsos a la base de datos?
 php bin/console doctrine:fixtures:load
+
+
 6.
 ¿Cuál es el comando de creación de factories?
-php bin/console doctrine:factory
+php bin/console make:factory
 
-Repasar
 7.
 ¿Cuál es la función de la clase AppFixtures?
 Esta clase no existe
-
+Crear los moldes de datos de cada tabla
 Repasar
+
+
 8.
 ¿Cuál es el componente para habilitar las vistas en Symfony?
 composer require symfony/twig-pack
+
+
 9.
 ¿Cómo se llama la vista que funciona como plantilla?
 layouts
-
+_base.html.twig
 Repasar
+
+
 10.
 ¿Cuál es el Método para listar a todos los registros de una tabla?
 findAll()
+
 11.
 ¿Cómo podemos crear controladores más concisos?
 Instalando el paquete de depuración e inspección
-
+Creando únicamente los métodos CRUD
 Repasar
+
 12.
 ¿Qué quiere decir esta línea: product.metadata.code?
 Desde product se está accediendo a la relación metadata, esta última cuenta con un campo llamado code
+
+
 13.
 ¿Qué entendemos por refactorizar (Refactoring)?
 Cambio interno para mejorar la lectura del código y sea más fácil el mantenimiento futuro
+
+
 14.
 ¿Qué parámetro acepta el método createQuery?
 DQL
+
 15.
 ¿Cómo podemos ver el DQL generado al usar createQueryBuilder?
 getSQL()
-
 Repasar
+
 16.
 ¿Cuál es la función de LEFT JOIN?
 Devolver todas las filas de la tabla de la izquierda y las coincidencias de la tabla de la derecha
+
+
 17.
 ¿Con qué método damos de alta a un parámetro en una consulta?
 Escribiendo :parameter al usar el método andWhere
 
 Repasar
+
+
 18.
 ¿Qué clase maneja las peticiones o solicitudes web?
 Request
+
+
 19.
 ¿Qué usamos normalmente para consultar una tabla?
 Una entidad
-
+Código SQL en el controlador
 Repasar
-20.
-¿Cómo podemos ver el listado de comandos?
 
+
+21.
+¿Cómo podemos ver el listado de comandos?
 php bin/console
+
+
