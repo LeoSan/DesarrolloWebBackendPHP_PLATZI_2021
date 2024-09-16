@@ -273,9 +273,7 @@ Postman
 
 1.
 ¿Cuál es el comando de creación o actualización de entidades?
-php bin/console make:entity y php bin/console edit:entity
-Repasar
-
+php bin/console make:entity
 
 2.
 ¿Cuál es el comando para revisar a nuestras migraciones?
@@ -284,9 +282,7 @@ php bin/console doctrine:migrations:list
 
 3.
 ¿Cuál es el tipo de campo para relacionar tablas?
-Existen varios tipos
-ManyRelations
-Repasar
+relation
 
 4.
 ¿Cuantas estructuras físicas podemos crear al momento de relacionar tablas?
@@ -306,10 +302,7 @@ php bin/console make:factory
 
 7.
 ¿Cuál es la función de la clase AppFixtures?
-Esta clase no existe
-Crear los moldes de datos de cada tabla
-Repasar
-
+Desarrollar la lógica y proceso de creación de datos falsos
 
 8.
 ¿Cuál es el componente para habilitar las vistas en Symfony?
@@ -320,47 +313,50 @@ composer require symfony/twig-pack
 ¿Cómo se llama la vista que funciona como plantilla?
 layouts
 _base.html.twig
+template.html.twig
 Repasar
 
 
-10.
+11.
 ¿Cuál es el Método para listar a todos los registros de una tabla?
 findAll()
 
-11.
+12.
 ¿Cómo podemos crear controladores más concisos?
 Instalando el paquete de depuración e inspección
 Creando únicamente los métodos CRUD
+No importando tantas clases
 Repasar
 
-12.
+14.
 ¿Qué quiere decir esta línea: product.metadata.code?
 Desde product se está accediendo a la relación metadata, esta última cuenta con un campo llamado code
 
 
-13.
+15.
 ¿Qué entendemos por refactorizar (Refactoring)?
 Cambio interno para mejorar la lectura del código y sea más fácil el mantenimiento futuro
 
 
-14.
+16.
 ¿Qué parámetro acepta el método createQuery?
 DQL
 
-15.
+17.
 ¿Cómo podemos ver el DQL generado al usar createQueryBuilder?
 getSQL()
+Esto solo es posible al usar el método createQuery
 Repasar
 
-16.
+19.
 ¿Cuál es la función de LEFT JOIN?
 Devolver todas las filas de la tabla de la izquierda y las coincidencias de la tabla de la derecha
 
 
-17.
+20.
 ¿Con qué método damos de alta a un parámetro en una consulta?
 Escribiendo :parameter al usar el método andWhere
-
+No hay forma de hacerlo
 Repasar
 
 
@@ -373,6 +369,7 @@ Request
 ¿Qué usamos normalmente para consultar una tabla?
 Una entidad
 Código SQL en el controlador
+Un cliente de base de datos
 Repasar
 
 
@@ -380,4 +377,13 @@ Repasar
 ¿Cómo podemos ver el listado de comandos?
 php bin/console
 
+22.- 
+¿Cuántas estructuras físicas podemos crear al momento de relacionar tablas?
+4 
+repasar 
+
+23.- ¿Qué clase maneja las peticiones o solicitudes web?
+request 
+
+24.- 
 
