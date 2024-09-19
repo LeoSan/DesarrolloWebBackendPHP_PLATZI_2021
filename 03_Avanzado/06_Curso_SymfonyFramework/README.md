@@ -286,9 +286,7 @@ relation
 
 4.
 ¿Cuantas estructuras físicas podemos crear al momento de relacionar tablas?
-1
-4
-Repasar
+2
 
 
 5.
@@ -311,10 +309,7 @@ composer require symfony/twig-pack
 
 9.
 ¿Cómo se llama la vista que funciona como plantilla?
-layouts
-_base.html.twig
-template.html.twig
-Repasar
+base.html.twig
 
 
 11.
@@ -323,10 +318,7 @@ findAll()
 
 12.
 ¿Cómo podemos crear controladores más concisos?
-Instalando el paquete de depuración e inspección
-Creando únicamente los métodos CRUD
-No importando tantas clases
-Repasar
+Instalando el paquete SensioFrameworkExtraBundle
 
 14.
 ¿Qué quiere decir esta línea: product.metadata.code?
@@ -344,9 +336,7 @@ DQL
 
 17.
 ¿Cómo podemos ver el DQL generado al usar createQueryBuilder?
-getSQL()
-Esto solo es posible al usar el método createQuery
-Repasar
+getDQL()
 
 19.
 ¿Cuál es la función de LEFT JOIN?
@@ -355,9 +345,7 @@ Devolver todas las filas de la tabla de la izquierda y las coincidencias de la t
 
 20.
 ¿Con qué método damos de alta a un parámetro en una consulta?
-Escribiendo :parameter al usar el método andWhere
-No hay forma de hacerlo
-Repasar
+setParameter()
 
 
 18.
@@ -367,11 +355,7 @@ Request
 
 19.
 ¿Qué usamos normalmente para consultar una tabla?
-Una entidad
-Código SQL en el controlador
-Un cliente de base de datos
-Repasar
-
+repositorio 
 
 21.
 ¿Cómo podemos ver el listado de comandos?
@@ -379,8 +363,7 @@ php bin/console
 
 22.- 
 ¿Cuántas estructuras físicas podemos crear al momento de relacionar tablas?
-4 
-repasar 
+2
 
 23.- ¿Qué clase maneja las peticiones o solicitudes web?
 request 
