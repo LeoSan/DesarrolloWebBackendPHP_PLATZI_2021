@@ -18,7 +18,7 @@
 - 🎓 Course  Introduccion Laravel 8 - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/02_Intermedio/03_Curso_Introduccion_Laravel_8/Examen/2021_Diploma-intro-laravel-platzi.pdf)
 
 > Learning about PHP - Avance
-
+- 🎓 Course RenovadoPHP - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/03_Avanzado/12_Curso_Renovado_PHP_2024/2024_diploma-web-php_platzi.pdf)
 - 🎓 Course  API REST - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/01_CursoAPI_REST/Examen/2021_Diploma-api-rest_PLATZI.pdf)
 - 🎓 Course  API REST Laravel - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/02_CursoAPI_REST_Laravel/Examen/2021_diploma-laravel-api-Platzi.pdf)
 - 🎓 Course  Laravel 8 Avanzado - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/03_Avanzado/03_Laravel_8_Avanzado/Examen/2021_Diploma-laravel-avanzado_PLATZI.pdf)
@@ -30,6 +30,7 @@
 
 > Final Certificate Global 
 ![Certificate](portadaCertificate.png)
+![Certificate](BACKEND_CON_PHP_2024.png)
 
 
 - 🎓 Certificado de la Carrera Platzi - [See Certificate](https://github.com/LeoSan/DesarrolloWebBackendPHP_PLATZI_2021/blob/main/2021_Diploma-Carrera-backend_php_PLATZI.pdf)
